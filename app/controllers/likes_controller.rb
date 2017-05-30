@@ -7,13 +7,12 @@ class LikesController < ApplicationController
 
   def show
     @like = Like.find(params[:id])
-
+    @likes = current_user.likes
     render("likes/show.html.erb")
   end
 
   def new
     @like = Like.new
-
     render("likes/new.html.erb")
   end
 

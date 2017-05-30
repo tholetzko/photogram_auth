@@ -1,6 +1,6 @@
 <div class="page-header">
   <h1>
-    Likes
+    My Likes
     <a href="/likes/new" class="btn btn-lg btn-success">New Like</a>
   </h1>
 </div>
@@ -17,7 +17,8 @@
       <% @likes.each do |like| %>
       <tr>
         <td><%= like.user_id %></td>
-        <td><%= like.photo_id %></td>
+        <td><img src="<%= like.photo.image %>"></td>
+        <td><%= like.photo.caption %></td>
         <td>
           <a href="/likes/<%= like.id %>" class="btn btn-primary">Show</a>
           <a href="/likes/<%= like.id %>/edit" class="btn btn-warning">Edit</a>

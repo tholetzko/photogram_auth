@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get "/users", :controller => "users", :action => "index"
   get "/users/:id", :controller => "users", :action => "show"
   get "/users/edit", :controller => "users", :action => "edit"
-  
+  get "/my_likes", :controller => "likes", :action => "index"
+
 
   # Routes for the Comment resource:
   # CREATE

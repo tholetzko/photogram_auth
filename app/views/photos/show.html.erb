@@ -4,6 +4,7 @@
 
 <div class="row">
   <div class="col-md-12 mb-2">
+
     <dl class="dl-horizontal">
       <dt>Caption</dt>
       <dd><%= @photo.caption %></dd>
@@ -13,8 +14,9 @@
 
       <dt>User</dt>
       <dd><%= @photo.user_id %></dd>
-
     </dl>
+
+    <% if @photo.user_id == current_user.id %>
 
     <div class="btn-group btn-group-justified">
       <a href="/photos" class="btn btn-primary">
@@ -27,5 +29,16 @@
         Delete
       </a>
     </div>
+
+    <% else  %>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/photos" class="btn btn-primary">
+        Back
+      </a>
+    </div>
+
+    <% end  %>
+
   </div>
 </div>
