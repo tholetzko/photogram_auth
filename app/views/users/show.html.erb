@@ -27,13 +27,15 @@
       <div class="panel-body">
         <a href="/photos/<%= photo.id %>">
           <img src="<%= photo.image %>" class="img-responsive">
-          <% photo.caption  %>
         </a>
+<small>
+          <%= photo.caption  %>
+</small>
       </div>
 
     </div>
 
   </div>
-  
+
 </div>
 <% end %>

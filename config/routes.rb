@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   # Routes for the User resource:
   get "/users", :controller => "users", :action => "index"
-    get "/users/:id", :controller => "users", :action => "show"
+  get "/users/:id", :controller => "users", :action => "show"
+  get "/users/edit", :controller => "users", :action => "edit"
 
   # Routes for the Comment resource:
   # CREATE

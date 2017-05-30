@@ -9,4 +9,9 @@ class UsersController < ApplicationController
     @photos = current_user.photos
     render("users/show.html.erb")
   end
+
+  def edit
+    render("devise/registrations/edit.html.erb")
+  end
+
 end
