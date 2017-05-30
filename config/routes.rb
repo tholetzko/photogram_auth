@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root to: "photos#index"
 
   # Routes for the User resource:
-  get "/users", :controller => "users", :action => "index" 
+  get "/users", :controller => "users", :action => "index"
+    get "/users/:id", :controller => "users", :action => "show"
 
   # Routes for the Comment resource:
   # CREATE

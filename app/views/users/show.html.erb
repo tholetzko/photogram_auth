@@ -1,0 +1,39 @@
+<div class="page-header">
+  <h3> <%= current_user.username %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <a href="/photos/new" class="btn btn-default btn-block">
+      <i class="fa fa-plus"></i>
+    </a>
+  </div>
+</div>
+
+<% @photos.each do |photo| %>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+          <small>
+            <%= time_ago_in_words(photo.created_at) %>
+          </small>
+        </h3>
+      </div>
+
+      <div class="panel-body">
+        <a href="/photos/<%= photo.id %>">
+          <img src="<%= photo.image %>" class="img-responsive">
+          <% photo.caption  %>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+  
+</div>
+<% end %>
