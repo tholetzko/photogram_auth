@@ -18,7 +18,7 @@
       <tr>
         <td><%= like.user_id %></td>
         <td><img src="<%= like.photo.image %>"></td>
-        <td><%= like.photo.caption %></td>
+        <td><%= like.photo.try(:caption) %></td>
         <td>
           <a href="/likes/<%= like.id %>" class="btn btn-primary">Show</a>
           <a href="/likes/<%= like.id %>/edit" class="btn btn-warning">Edit</a>
